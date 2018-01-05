@@ -40,9 +40,10 @@ defmodule Bookcase.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
+      {:cowboy, "~> 1.0"},
       {:ja_serializer, "~> 0.12.0"},
       {:phoenix_custom_generators, "~> 1.0.0"},
-      {:cowboy, "~> 1.0"}
+      {:cors_plug, "~> 1.2"}
     ]
   end
 
