@@ -1,5 +1,5 @@
-defmodule BookcaseApiWeb.Router do
-  use BookcaseApiWeb, :router
+defmodule BookcaseWeb.Router do
+  use BookcaseWeb, :router
 
   # pipeline :browser do
   #   plug :accepts, ["html"]
@@ -13,7 +13,7 @@ defmodule BookcaseApiWeb.Router do
     plug :accepts, ["json-api"]
   end
 
-  # scope "/", BookcaseApiWeb do
+  # scope "/", BookcaseWeb do
   #   pipe_through :browser # Use the default browser stack
 
   #   get "/", PageController, :index
@@ -21,7 +21,9 @@ defmodule BookcaseApiWeb.Router do
   #   get "/hello/:messenger", HelloController, :show
   # end
 
-  scope "/api", BookcaseApiWeb do
+  scope "/api", BookcaseWeb do
     pipe_through :api
+
+    resources "/books", BookController, except: [:new, :edit]
   end
 end

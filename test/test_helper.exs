@@ -1,4 +1,4 @@
 ExUnit.start()
 
-Ecto.Adapters.SQL.Sandbox.mode(BookcaseApi.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Bookcase.Repo, :manual)
 

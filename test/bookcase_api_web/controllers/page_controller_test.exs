@@ -1,5 +1,5 @@
-defmodule BookcaseApiWeb.PageControllerTest do
-  use BookcaseApiWeb.ConnCase
+defmodule BookcaseWeb.PageControllerTest do
+  use BookcaseWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

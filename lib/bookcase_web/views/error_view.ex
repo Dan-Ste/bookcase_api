@@ -1,5 +1,5 @@
-defmodule BookcaseApiWeb.ErrorView do
-  use BookcaseApiWeb, :view
+defmodule BookcaseWeb.ErrorView do
+  use BookcaseWeb, :view
 
   def render("404.html", _assigns) do
     "Page not found"

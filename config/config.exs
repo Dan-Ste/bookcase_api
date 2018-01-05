@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :bookcase_api,
-  ecto_repos: [BookcaseApi.Repo]
+config :bookcase,
+  ecto_repos: [Bookcase.Repo]
 
 # Configures the endpoint
-config :bookcase_api, BookcaseApiWeb.Endpoint,
+config :bookcase, BookcaseWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "rHH+hQ0uvuuEhHwzegQN2i46anD9ejbQMrkrQRWvBiMIBrg2Qh1rpa/lO3EZDl/O",
-  render_errors: [view: BookcaseApiWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: BookcaseApi.PubSub,
+  render_errors: [view: BookcaseWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Bookcase.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

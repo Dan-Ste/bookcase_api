@@ -1,12 +1,12 @@
-defmodule BookcaseApiWeb do
+defmodule BookcaseWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use BookcaseApiWeb, :controller
-      use BookcaseApiWeb, :view
+      use BookcaseWeb, :controller
+      use BookcaseWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,17 +19,17 @@ defmodule BookcaseApiWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: BookcaseApiWeb
+      use Phoenix.Controller, namespace: BookcaseWeb
       import Plug.Conn
-      import BookcaseApiWeb.Router.Helpers
-      import BookcaseApiWeb.Gettext
+      import BookcaseWeb.Router.Helpers
+      import BookcaseWeb.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/bookcase_api_web/templates",
-                        namespace: BookcaseApiWeb
+      use Phoenix.View, root: "lib/bookcase_web/templates",
+                        namespace: BookcaseWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
@@ -37,9 +37,9 @@ defmodule BookcaseApiWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import BookcaseApiWeb.Router.Helpers
-      import BookcaseApiWeb.ErrorHelpers
-      import BookcaseApiWeb.Gettext
+      import BookcaseWeb.Router.Helpers
+      import BookcaseWeb.ErrorHelpers
+      import BookcaseWeb.Gettext
     end
   end
 
@@ -54,7 +54,7 @@ defmodule BookcaseApiWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import BookcaseApiWeb.Gettext
+      import BookcaseWeb.Gettext
     end
   end
 

@@ -1,3 +1,3 @@
-defmodule BookcaseApiWeb.PageViewTest do
-  use BookcaseApiWeb.ConnCase, async: true
+defmodule BookcaseWeb.PageViewTest do
+  use BookcaseWeb.ConnCase, async: true
 end

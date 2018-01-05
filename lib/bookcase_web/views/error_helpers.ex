@@ -1,4 +1,4 @@
-defmodule BookcaseApiWeb.ErrorHelpers do
+defmodule BookcaseWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule BookcaseApiWeb.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(BookcaseApiWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(BookcaseWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(BookcaseApiWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(BookcaseWeb.Gettext, "errors", msg, opts)
     end
   end
 end

@@ -1,8 +1,8 @@
-defmodule BookcaseApiWeb.UserSocket do
+defmodule BookcaseWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", BookcaseApiWeb.RoomChannel
+  # channel "room:*", BookcaseWeb.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
@@ -30,7 +30,7 @@ defmodule BookcaseApiWeb.UserSocket do
   # Would allow you to broadcast a "disconnect" event and terminate
   # all active sockets and channels for a given user:
   #
-  #     BookcaseApiWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
+  #     BookcaseWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
   #
   # Returning `nil` makes this socket anonymous.
   def id(_socket), do: nil

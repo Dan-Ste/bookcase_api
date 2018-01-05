@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :bookcase_api, BookcaseApiWeb.Endpoint,
+config :bookcase, BookcaseWeb.Endpoint,
   http: [port: 4001],
   server: false
 
@@ -10,10 +10,10 @@ config :bookcase_api, BookcaseApiWeb.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :bookcase_api, BookcaseApi.Repo,
+config :bookcase, Bookcase.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "bookcase_api_test",
+  database: "bookcase_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

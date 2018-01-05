@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :bookcase_api, BookcaseApiWeb.Endpoint,
+config :bookcase, BookcaseWeb.Endpoint,
   http: [port: 4000],
   debug_errors: false,
   code_reloader: true,
@@ -30,13 +30,13 @@ config :bookcase_api, BookcaseApiWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :bookcase_api, BookcaseApiWeb.Endpoint,
+config :bookcase, BookcaseWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
-      ~r{lib/bookcase_api_web/views/.*(ex)$},
-      ~r{lib/bookcase_api_web/templates/.*(eex)$}
+      ~r{lib/bookcase_web/views/.*(ex)$},
+      ~r{lib/bookcase_web/templates/.*(eex)$}
     ]
   ]
 
@@ -48,10 +48,10 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :bookcase_api, BookcaseApi.Repo,
+config :bookcase, Bookcase.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "bookcase_api_dev",
+  database: "bookcase_dev",
   hostname: "localhost",
   pool_size: 10

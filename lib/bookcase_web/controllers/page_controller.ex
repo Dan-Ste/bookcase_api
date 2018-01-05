@@ -1,5 +1,5 @@
-defmodule BookcaseApiWeb.PageController do
-  use BookcaseApiWeb, :controller
+defmodule BookcaseWeb.PageController do
+  use BookcaseWeb, :controller
 
   def index(conn, _params) do
     conn

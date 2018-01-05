@@ -1,4 +1,4 @@
-defmodule BookcaseApi.DataCase do
+defmodule Bookcase.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,20 +16,20 @@ defmodule BookcaseApi.DataCase do
 
   using do
     quote do
-      alias BookcaseApi.Repo
+      alias Bookcase.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import BookcaseApi.DataCase
+      import Bookcase.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(BookcaseApi.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Bookcase.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(BookcaseApi.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Bookcase.Repo, {:shared, self()})
     end
 
     :ok

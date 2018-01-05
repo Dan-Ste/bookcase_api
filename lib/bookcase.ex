@@ -1,6 +1,6 @@
-defmodule BookcaseApi do
+defmodule Bookcase do
   @moduledoc """
-  BookcaseApi keeps the contexts that define your domain
+  Bookcase keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

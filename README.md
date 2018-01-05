@@ -1,4 +1,4 @@
-# BookcaseApi
+# Bookcase
 
 To start your Phoenix server:
 

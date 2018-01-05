@@ -1,4 +1,4 @@
-defmodule BookcaseApiWeb.ChannelCase do
+defmodule BookcaseWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule BookcaseApiWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint BookcaseApiWeb.Endpoint
+      @endpoint BookcaseWeb.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(BookcaseApi.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Bookcase.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(BookcaseApi.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Bookcase.Repo, {:shared, self()})
     end
     :ok
   end

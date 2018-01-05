@@ -1,5 +1,5 @@
-defmodule BookcaseApi.Repo do
-  use Ecto.Repo, otp_app: :bookcase_api
+defmodule Bookcase.Repo do
+  use Ecto.Repo, otp_app: :bookcase
 
   @doc """
   Dynamically loads the repository url from the
